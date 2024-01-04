@@ -2,10 +2,10 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { googleSearchField, googleSearchOperation } from './googleSearchDescription';
 export class Valueserp implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Strange Logic Serp',
+		displayName: 'ValueSerp (Google search)',
 name: 'valueserp',
 // eslint-disable-next-line n8n-nodes-base/node-class-description-icon-not-svg
-icon: 'file:sl.png',
+icon: 'file:valueserp.png',
 group: ['transform'],
 version: 1,
 subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
