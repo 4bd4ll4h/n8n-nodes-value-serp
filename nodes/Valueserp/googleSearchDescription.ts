@@ -424,7 +424,7 @@ export const googleSearchField: INodeProperties[] = [
 		routing: {
 			request: {
 				qs: {
-					gl: '={{$value}}',
+					hl: '={{$value}}',
 				},
 			},
 		},
