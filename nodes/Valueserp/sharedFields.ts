@@ -499,6 +499,26 @@ export const resulteFilterForProdAndShop: INodeProperties[] = [
 
 		},
 		options: [
+				{
+				displayName: 'Device',
+				name: 'device',
+				description:
+					'Determines the Device to use to get results.\nCan be set to desktop (default) to use a regular desktop web browser, tablet to use a tablet browser (use the tablet_type to choose the type of tablet Device), or mobile to use a mobile browser (use the mobile_type to choose the type of mobile Device).\nNote that not all search_type values are parsed for each Device (for example, some results are parsed in desktop only), see the individual results for more information',
+				type: 'options',
+				default: 'desktop',
+				options: [
+					{ name: 'Desktop', value: 'desktop' },
+					{ name: 'Tablet', value: 'tablet' },
+					{ name: 'Mobile', value: 'mobile' },
+				],
+				routing: {
+					request: {
+						qs: {
+							device: '={{$value}}',
+						},
+					},
+				},
+			},
 			{
 				displayName: 'URL',
 				description:
